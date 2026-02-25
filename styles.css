@@ -64,6 +64,9 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+body{
+    min-width:400px;
+}
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
@@ -143,6 +146,7 @@ table {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
+@media screen and (min-width: 800px)
 
     #results {
         grid-template-columns: 1fr 1fr;
@@ -160,3 +164,4 @@ table {
 
 
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width: 1024px)
