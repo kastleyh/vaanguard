@@ -66,6 +66,9 @@ table {
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 body{
     min-width:400px;
+    color: var(--white);
+    font-family: var(--font);
+    background-color:var(--black) ;
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
@@ -77,15 +80,40 @@ body{
     margin: 0 auto;
 }
 
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    padding:10px 0;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+    url("images/vanguard-hero.jpg") no-repeat center center/cover;
     height: 80vh;
     display: grid;
     place-items: center;
     text-align: center;
-    padding: 1rem;
-    overflow: hidden;
+}
+
+.hero h2{
+    font-size: 18px;
+}
+
+.button{
+    display:inline-block;
+    background: var(--blue);
+    color:var(--white);
+    border-radius: 5px;
+    padding:10px 5px;
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
@@ -95,7 +123,7 @@ body{
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    background: url("images/vanguard-logo.svg") no-repeat center/contain;
 
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -164,4 +192,6 @@ body{
 
 
 /* MEDIA QUERIES (LARGE) */
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 1024px){
+
+}
