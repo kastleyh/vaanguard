@@ -168,6 +168,7 @@ nav ul{
     font-weight: bold;
     color: var(--white);
 }
+
 @keyframes stepUp {
     0% {
         height: 0;
@@ -181,13 +182,84 @@ nav ul{
     animation: stepUp 1s ease-in-out forwards;
 }
 
+#contact{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 40px 0;
+
+}
+
+#contact h2{
+    font-size: 25px;
+    margin-bottom: 12px;
+    color:var(--white)
+}
+
+.form-info{
+    display:flex;
+    flex-direction: column;
+    color:var(--white);
+    gap:10px;
+    
+}
+
+.form-info label{
+    font-size: 12px;
+    color:var(--white);
+}
+
+.form-info input{
+    background-color: var(--white);
+    border: 1px solid --charcoal;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: var(--font);
+    font-size:;
+    color:var(--black);
+    width:100%;
+    transition: border-color 0.2s ease;
+}
+
+.form button{
+    width:100%;
+    text-align:center;
+    padding:12px 0;
+    font-size:16px;
+}
+
+
+footer{
+    background-color: var(--black);
+    border-top: 1px solid --black;
+    padding:24px;
+    text-align: center;
+}
+
+.footer small{
+    font-size: 12px;
+    color:var(--white);
+    line-height: 20px;
+}
+
+.footer p{
+    font-size: 12px;
+    color:var(--white);
+    line-height: 20px;
+
+}
+
+.footer a{
+    color: var(--blue);
+
+}
 
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width: 800px)
 
-    #results {
+.results{
         grid-template-columns: 1fr 1fr;
     }
+
     .results-container {
         flex-direction: row;
         justify-content: space-between;
