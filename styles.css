@@ -98,6 +98,7 @@ nav ul{
     width: 40px;
     height: 40px;
     gap:10px;
+    object-fit: contain;
 
 }
 
@@ -146,13 +147,14 @@ nav ul{
     padding: 1rem;
     position: relative;
 }
+
 /* ADD ON TRANSITION ON HEIGHT */
 .bar {
     width: 50px;
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 0.5s ease;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
