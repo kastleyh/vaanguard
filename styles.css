@@ -1,7 +1,7 @@
 /* CSS BY KADIA ASTLEY-HARWOOD */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+/* IMPORT "INTER" FROM GOOGLE FONTS"*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */
@@ -65,10 +65,13 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 body{
+
     min-width:400px;
     color: var(--white);
+    line-height:1.6;
     font-family: var(--font);
-    background-color:var(--black) ;
+    background-color:var(--black);
+    font-size: 16px;
 }
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
@@ -80,13 +83,35 @@ body{
     margin: 0 auto;
 }
 
+nav{
+    justify-content: space-between;
+}
 
 nav ul{
     display: flex;
     justify-content: flex-end;
     padding:10px 0;
 
+    
 }
+
+nav li{
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    padding:10px 15px;
+
+
+}
+
+nav a{
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
 
 .logo{
     display: flex;
@@ -102,18 +127,65 @@ nav ul{
 
 }
 
+header{
+    border-bottom: 4px solid var(--blue);
+    z-index: 100;
+    padding: 10px 0;
+
+}
+
+header.logo{
+     justify-content: space-between;
+}
+
+
+header .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: space-between;
+}
+
+h1{
+    position: relative;
+    padding-left: 40px;
+    font-size: 20px;
+    color: var(--blue);
+
+}
+
+
+
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
-.hero{
+#hero{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
     url("images/vanguard-hero.jpg") no-repeat center center/cover;
     height: 80vh;
     display: grid;
     place-items: center;
     text-align: center;
+    overflow: hidden;
+    padding: 20px;
 }
 
-.hero h2{
+#hero h2{
     font-size: 18px;
+    margin-bottom: 5px;
+    color:var(--white);
+
+}
+
+#hero.container p{
+    color:var(--white);
+    margin-bottom: 5px;
+    font-size:14px;
+
+}
+
+#hero.container{
+    text-align: center;
+
 }
 
 .button{
@@ -121,13 +193,121 @@ nav ul{
     background: var(--blue);
     color:var(--white);
     border-radius: 5px;
-    padding:10px 5px;
+    padding:15px 5px;
+    margin-bottom: 100px;
+    margin-top: 5px;
+    text-decoration: none;
 }
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
-    content: "";
+.about{
+    padding:40px 0;
+    background-color: var(--white);
+    color:var(--black);
 
+}
+
+.about h2{
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: var(--black);
+    text-align: left;
+    font-weight: bold;
+    background-color: --white;
+
+}
+.about p{
+    text-align: left;
+    color: var(--black);
+    font-size: 16px;
+}
+
+
+#services{
+
+    background-color: var(--white);
+    padding: 40px 0 60px 0;
+    border-top: 1px solid var(--charcoal);
+}
+
+#services h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+    color:var(--black);
+    font-weight: bold;
+    background-color: var(--white);
+}
+.services-info h3{
+    color: var(--white);
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+.services-info p{
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white);
+
+}
+
+.services-info:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+.services-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+    gap: 20px;
+
+}
+
+.services-info{
+    background-color: var(--blue);
+    color:var(--white);
+    border-radius: 5px;
+    padding: 20px;
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#results{
+    padding: 40px 0;
+    background-color: var(--blue);
+
+}
+
+#results h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.results-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#table{
+     width:100%;
+     font-size: 14px;
+     color: var(--white);
+}
+
+thead{
+    background-color: var(--charcoal);
+}
+
+th, td{
+    padding: 10px;
+    text-align: left;
+    background-color: var(--black);
+
+}
+/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+h1::before{
+    content: "";
+    position:absolute;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
@@ -182,6 +362,8 @@ nav ul{
     animation: stepUp 1s ease-in-out forwards;
 }
 
+
+
 #contact{
     background-color: var(--black);
     color: var(--white);
@@ -192,7 +374,8 @@ nav ul{
 #contact h2{
     font-size: 25px;
     margin-bottom: 12px;
-    color:var(--white)
+    color:var(--white);
+    margin-top: 20px;
 }
 
 .form-info{
@@ -200,6 +383,7 @@ nav ul{
     flex-direction: column;
     color:var(--white);
     gap:10px;
+    margin-bottom: 16px;
     
 }
 
@@ -210,23 +394,36 @@ nav ul{
 
 .form-info input{
     background-color: var(--white);
-    border: 1px solid --charcoal;
+    border: 1px solid var(--charcoal);
     border-radius: 5px;
     padding: 10px 15px;
     font-family: var(--font);
-    font-size:;
+    font-size:16px;
     color:var(--black);
     width:100%;
     transition: border-color 0.2s ease;
 }
 
-.form button{
+.form-info textarea{
+    background-color: var(--white);
+    border:1px solid var(--charcoal);
+    border-radius: 5px;
+    padding:15px 10px;
+    font-family:var(--black);
     width:100%;
-    text-align:center;
-    padding:12px 0;
-    font-size:16px;
+
 }
 
+.form-info button{
+    width:100%;
+    color:var(--white);
+    background-color: var(--blue);
+    border-radius: 5px;
+    border:none;
+    padding:15px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
 footer{
     background-color: var(--black);
@@ -255,14 +452,14 @@ footer{
 
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width: 800px)
-
-.results{
+{
+    .services-grid{
         grid-template-columns: 1fr 1fr;
     }
-
     .results-container {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
     }
     .results-table {
         width: 50%;
@@ -270,9 +467,28 @@ footer{
     .bar-chart {
         width: 50%;
     }
-
+}
 
 /* MEDIA QUERIES (LARGE) */
 @media screen and (min-width: 1024px){
+    .services-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #hero h2{
+        font-size: 24px;
+    }
+
+    #about h2{
+        font-size: 20px;
+    }
+
+    #about{
+        padding: 60px 0;
+    }
+
+    #results{
+        padding: 60px 0;
+    }
 
 }
